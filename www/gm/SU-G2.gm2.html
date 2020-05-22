@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>
+HGen
+</title>
+<style>
+
+.BD  {background-color:gray;display:flex; flex-direction:column; max-width:800px;}
+.BXrow  {flex-basis:33%; display:flex; flex-direction:row; border:2px solid lightblue; padding:3px;}
+.box  {flex-basis:33%; display:flex; flex-direction:column;border:2px solid pink;padding:5px;}
+.brw  {flex-basis:33%; display:flex; flex-direction:row;}
+.sq  {flex-basis:33%;}
+.sq  {border: 1px solid black; padding: 3px}
+.bxT  {font-family:Helvetica;font-size:8em;}
+.bxNg  {font-family:Helvetica;font-size:12em;}
+.bxsPD  {font-family:Helvetica;font-size:8em;}
+.bx1  {font-size:16em;}
+</style>
+</head>
+<body>
+<h1>Soduku Board</h1>
+<a href=./ > LOCAL/*</a>
+&nbsp;&nbsp;&nbsp;{ &nbsp;&nbsp;&nbsp;} 
+<div class=BD >
+<div class=BXrow >
+<div class=box >
+<div class=brw >
+<div class=sq >
+<span class='.bx1'>1</span>
+</div>
+<div class=sq >
+<span class='.bx1'>2</span>
+</div>
+<div class=sq >
+<span class='.bx1'>3</span>
+</div>
+</div>
+<div class=brw >
+<div class=sq >
+<span class='.bx1'>4</span>
+</div>
+<div class=sq >
+<span class='.bx1'>5</span>
+</div>
+<div class=sq >
+<span class='.bx1'>6</span>
+</div>
+</div>
+<div class=brw >
+<div class=sq >
+<span class='.bx1'>7</span>
+</div>
+<div class=sq >
+<span class='.bx1'>8</span>
+</div>
+<div class=sq >
+<span class='.bx1'>9</span>
+</div>
+</div>
+</div>
+<div class=box >
+<div class=brw >
+<div class=sq >
+<span class='.bx1'>1</span>
+</div>
+<div class=sq >
+<span class='.bx1'>2</span>
+</div>
+<div class=sq >
+<span class='.bx1'>3</span>
+</div>
+</div>
+<div class=brw >
+<div class=sq >
+<span class='.bx1'>4</span>
+</div>
+<div class=sq >
+<span class='.bx1'>5</span>
+</div>
+<div class=sq >
+<span class='.bx1'>6</span>
+</div>
+</div>
+<div class=brw >
+<div class=sq >
+<span class='.bx1'>7</span>
+</div>
+<div class=sq >
+<span class='.bx1'>8</span>
+</div>
+<div class=sq >
+<span class='.bx1'>9</span>
+</div>
+</div>
+</div>
+<div class=box >
+<div class=brw >
+<div class=sq >
+<span class='.bx1'>1</span>
+</div>
+<div class=sq >
+<span class='.bx1'>2</span>
+</div>
+<div class=sq >
+<span class='.bx1'>3</span>
+</div>
+</div>
+<div class=brw >
+<div class=sq >
+<span class='.bx1'>4</span>
+</div>
+<div class=sq >
+<span class='.bx1'>5</span>
+</div>
+<div class=sq >
+<span class='.bx1'>6</span>
+</div>
+</div>
+<div class=brw >
+<div class=sq >
+<span class='.bx1'>7</span>
+</div>
+<div class=sq >
+<span class='.bx1'>8</span>
+</div>
+<div class=sq >
+<span class='.bx1'>9</span>
+</div>
+</div>
+</div>
+</div>
+<div class=BXrow >
+<div class=box >
+<div class=brw >
+<div class=sq >
+<span class='.bx1'>1</span>
+</div>
+<div class=sq >
+<span class='.bx1'>2</span>
+</div>
+<div class=sq >
+<span class='.bx1'>3</span>
+</div>
+</div>
+<div class=brw >
+<div class=sq >
+<span class='.bx1'>4</span>
+</div>
+<div class=sq >
+<span class='.bx1'>5</span>
+</div>
+<div class=sq >
+<span class='.bx1'>6</span>
+</div>
+</div>
+<div class=brw >
+<div class=sq >
+<span class='.bx1'>7</span>
+</div>
+<div class=sq >
+<span class='.bx1'>8</span>
+</div>
+<div class=sq >
+<span class='.bx1'>9</span>
+</div>
+</div>
+</div>
+<div class=box >
+<div class=brw >
+<div class=sq >
+<span class='.bx1'>1</span>
+</div>
+<div class=sq >
+<span class='.bx1'>2</span>
+</div>
+<div class=sq >
+<span class='.bx1'>3</span>
+</div>
+</div>
+<div class=brw >
+<div class=sq >
+<span class='.bx1'>4</span>
+</div>
+<div class=sq >
+<span class='.bx1'>5</span>
+</div>
+<div class=sq >
+<span class='.bx1'>6</span>
+</div>
+</div>
+<div class=brw >
+<div class=sq >
+<span class='.bx1'>7</span>
+</div>
+<div class=sq >
+<span class='.bx1'>8</span>
+</div>
+<div class=sq >
+<span class='.bx1'>9</span>
+</div>
+</div>
+</div>
+<div class=box >
+<div class=brw >
+<div class=sq >
+<span class='.bx1'>1</span>
+</div>
+<div class=sq >
+<span class='.bx1'>2</span>
+</div>
+<div class=sq >
+<span class='.bx1'>3</span>
+</div>
+</div>
+<div class=brw >
+<div class=sq >
+<span class='.bx1'>4</span>
+</div>
+<div class=sq >
+<span class='.bx1'>5</span>
+</div>
+<div class=sq >
+<span class='.bx1'>6</span>
+</div>
+</div>
+<div class=brw >
+<div class=sq >
+<span class='.bx1'>7</span>
+</div>
+<div class=sq >
+<span class='.bx1'>8</span>
+</div>
+<div class=sq >
+<span class='.bx1'>9</span>
+</div>
+</div>
+</div>
+</div>
+<div class=BXrow >
+<div class=box >
+<div class=brw >
+<div class=sq >
+<span class='.bx1'>1</span>
+</div>
+<div class=sq >
+<span class='.bx1'>2</span>
+</div>
+<div class=sq >
+<span class='.bx1'>3</span>
+</div>
+</div>
+<div class=brw >
+<div class=sq >
+<span class='.bx1'>4</span>
+</div>
+<div class=sq >
+<span class='.bx1'>5</span>
+</div>
+<div class=sq >
+<span class='.bx1'>6</span>
+</div>
+</div>
+<div class=brw >
+<div class=sq >
+<span class='.bx1'>7</span>
+</div>
+<div class=sq >
+<span class='.bx1'>8</span>
+</div>
+<div class=sq >
+<span class='.bx1'>9</span>
+</div>
+</div>
+</div>
+<div class=box >
+<div class=brw >
+<div class=sq >
+<span class='.bx1'>1</span>
+</div>
+<div class=sq >
+<span class='.bx1'>2</span>
+</div>
+<div class=sq >
+<span class='.bx1'>3</span>
+</div>
+</div>
+<div class=brw >
+<div class=sq >
+<span class='.bx1'>4</span>
+</div>
+<div class=sq >
+<span class='.bx1'>5</span>
+</div>
+<div class=sq >
+<span class='.bx1'>6</span>
+</div>
+</div>
+<div class=brw >
+<div class=sq >
+<span class='.bx1'>7</span>
+</div>
+<div class=sq >
+<span class='.bx1'>8</span>
+</div>
+<div class=sq >
+<span class='.bx1'>9</span>
+</div>
+</div>
+</div>
+<div class=box >
+<div class=brw >
+<div class=sq >
+<span class='.bx1'>1</span>
+</div>
+<div class=sq >
+<span class='.bx1'>2</span>
+</div>
+<div class=sq >
+<span class='.bx1'>3</span>
+</div>
+</div>
+<div class=brw >
+<div class=sq >
+<span class='.bx1'>4</span>
+</div>
+<div class=sq >
+<span class='.bx1'>5</span>
+</div>
+<div class=sq >
+<span class='.bx1'>6</span>
+</div>
+</div>
+<div class=brw >
+<div class=sq >
+<span class='.bx1'>7</span>
+</div>
+<div class=sq >
+<span class='.bx1'>8</span>
+</div>
+<div class=sq >
+<span class='.bx1'>9</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3> 18MAY2020 02:05   by ^hgh</h3>
+</body>
+</html>

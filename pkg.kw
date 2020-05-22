@@ -1,0 +1,18 @@
+#!
+#
+#   Comments  #
+#   Document Folder/Dir  and Substructure Function and Status
+#
+#   ~/kj7r/sudoku/         is copy from kj8a/sudoku/     for printing
+#
+#      LIMITED function :  DO NOT EDIT Here !
+#
+#    ds2 alias in npm.sh  is cd here
+#
+#    cd ~/kj7r/sudoku;
+#  via scp kw:s8:kj8a/sudoku/r*/*.m .
+#    Note replaces prior copies here, ? recreates subdirs  r/, rsr/
+#
+#  This should go away with use of git for sudoku     (not yet, 23jan17)
+#
+#     s8 is in hosts file of TP7r  as 192.168.2.105

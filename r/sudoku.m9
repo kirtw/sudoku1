@@ -1,0 +1,180 @@
+sudoku  ;CKW/ESC  i2Jun16  ; 20160603-55 ; Quickie Sudoku Model & Solution
+  ;
+  ;
+  ; Current R, C, B, E, GM 81 char digit or space,  R x C  	Note RC eliminated vs R_C
+  ;    Calc in C1:  R,C -> B, E   e = (R-1)*3 + (C-1)  char position
+  ;  N  1-9
+  D IGM,WL,WGX(GM)
+  D G1x,WL,WGX(GM)
+  Q
+;*	Init LR, LC, LB,  LRC,  Brc
+IGM   S L0=123456789,nMV=0
+    F R=1:1:9 S LR(R)=L0
+    F C=1:1:9 S LC(C)=L0
+    F B=1:1:9 S LB(B)=L0
+    F R=1:1:9 F C=1:1:9 S LRC(R_C)=L0
+    S X=$E("          ",1,9),GM="" F C=1:1:9 S GM=GM_X
+    KILL tb S t=3 F i=1:1:9 S tb(i)=t,t=t+10
+      S tb(10)=t
+    KILL nN  ;Num play of N digit nN(N)
+    KILL Brc,BB F E=1:1:81 D C2 S BB(B)=$G(BB(B))_","_R_C
+    F B=1:1:9 S BL=BB(B) F bk=1:1:9 S Brc(B,bk)=$P(BL,",",bk+1)  ;shift leading comma
+    Q
+;*
+PLY(R,C,N)  D C1  ; R,C : B, E
+    I $G(N)'?1n D b^dv("N Val 1-9","N,R,C") Q 1
+    S X=$E(GM,E) I X'=" " D b^dv("Dupl Play ","R,C,N,E,X,GM") Q 2
+    S $E(GM,E)=N
+    D RN
+    S nN(N)=$G(nN(N))+1
+    S nMV=nMV+1
+    Q 0
+;*  Remove N from LR, LC, LB
+RN  S LR(R)=$P(LR(R),N)_$P(LR(R),N,2)  ; Removes N from List
+    S LC(C)=$P(LC(C),N)_$P(LC(C),N,2)
+    S LB(B)=$P(LB(B),N)_$P(LB(B),N,2)
+    Q
+RN2 I LR(R)[N S LR(R)=$P(LR(R),N)_$P(LR(R),N,2) ;D CLR(R,N)  ; Removes N from List
+    I LC(C)[N S LC(C)=$P(LC(C),N)_$P(LC(C),N,2)
+    I LB(B)[N S LB(B)=$P(LB(B),N)_$P(LB(B),N,2)
+    Q
+;LR(R) changed  - Ck all R,C in R
+CLR(R,N) F c=1:1:9 S rc=R_c I LRC(rc)[N S LRC(rc)=$P(LRC(rc),N)_$P(LRC(rc),N,2) ;D CLRC(R)
+    Q
+CLC(C,N) F r=1:1:9 S rc=r_C I LRC(rc)[N S LRC(rc)=$P(LRC(rc),N)_$P(LRC(rc),N,2) ;D CLRC(C)
+    Q
+CLB(B,N) F bk=1:1:9 S rc=Brc(B,bk) I LRC(rc)[N S LRC(rc)=$P(LRC(rc),N)_$P(LRC(rc),N,2) ;D CLRC(C)
+    Q
+;*  Analysis  Testng each N for hits in LR, LC, LB  -Backwards !!!  Try not[
+PRC   KILL IX,LRC
+      F R=1:1:9 F C=1:1:9 S PN="" DO
+        .F N=1:1:9 DO
+          ..I LR(R)'[N Q
+          ..I LC(C)'[N Q
+          ..D C1 I LB(B)'[N Q
+          ..S PN=PN_N
+	.S LRC(R_C)=PN,nn=$L(PN),IX(nn,R_C)=PN
+      Q
+; Calc LRC(R_C)  from G alone  
+PRC0(G) KILL IX2,LRC2  I $G(G)="" D ^dvsch,b^dv("Bug ","G") Q
+        F R=1:1:9 F C=1:1:9 D C1 DO
+          .S PN=123456789 F N=1:1:9 DO
+             ..F c=1:1:9 S e=$$ERC(R,c),n=$E(G,e) I PN[n D Rem
+             ..F r=1:1:9 S e=$$ERC(r,C),n=$E(G,e) I PN[n D Rem
+             ..F bi=1:1:3 F bj=1:1:3 S e=$$EB(B,bi,bj),n=$E(G,e) I PN[n D Rem
+          .S LRC2(R_C)=PN,nn=$L(PN),IX2(nn,R_C)=PN
+        Q
+;*
+Rem    S PN=$P(PN,n)_$P(PN,n,2) Q
+;*  Compare IX, IX2
+XX     S n1=0,n2=0
+       F ni=0:1 S n1=$O(IX(n1)),n2=$O(IX2(n2)) DO  Q:n1=""  D X2
+         .I n1'=n2 D b^dv("Error","n1,n2")
+       Q
+X2     S r1=0,r2=0 F ri=0:1 S r1=$O(IX(n1,r1)),r2=$O(IX2(n2,r2)) Q:r1=""&(r2="")  DO
+         .I r1'=r2 D b^dv("Error r","r1,r2,n1,n2")
+       Q
+;*  Compare LRC & LRC2
+XLRC   F R=1:1:9 F C=1:1:9 S rc=R_C DO
+         .S P1=LRC(rc),P2=LRC2(rc) I P1'=P2 D b^dv("Err LRC ","P1,P2,rc")
+       Q
+;* Need Testing
+ERC(r,c) S e=(r-1)*9+(c-1)+1 Q e
+EB(b,br,bc) S r=(br-1)\3+bc,c=(br-1)#3+bc,e=(r-1)*9+c+1 
+      S bk=(br-1)*3+bc I bk<0!(bk>9) D b^dv("bk err","bk,br,bc")
+      Q e
+;  bk : br, bc
+Exb   S br=(bk-1)\3+1,bc=(bk-1)#3+1 
+      I br<1!(br>3)!(bc<1)!(bc>3) D b^dv("Exb Err","bk,br,bc")
+      Q
+  ;*
+WIX   W !,"Remaining-",!
+      F N=1:1:9 W:$X ! W "  ",N,":  " DO
+        .S rc=0 F ni=0:1 S rc=$O(IX(N,rc)) Q:rc=""  W rc," "
+      W !
+      Q
+CIX    KILL IX F R=1:1:9 F C=1:1:9 S PN=LRC(R_C),nn=$L(PN),IX(nn,R_C)=PN  ;Sort by num remaining
+    Q
+;*  Conversion  R,C  to  E, B
+C1    I (R_C)'?2N D ^dvsch,b^dv("R,C format ?","R,C") Q
+      S E=(R-1)*9+(C),B=((R-1)\3*3)+((C-1)\3)+1
+        I E<0!(E>81) D b^dv(" E calc ?","E,R,C,B")
+        I B<0!(B>9)  D b^dv("Bx calc ?","B,R,C,E")
+      Q
+; E : R,C, B
+C2    I $G(E)="" D b^dv("E undef for C2","E,R,C,B,GM") Q
+      I E<1,E>81 D b^dv("E out of range 1-81","E,R,C,B,GM") Q
+      S R=E-1\9+1,C=(E-1)#9+1,B=((R-1)\3*3)+((C-1)\3)+1
+      Q
+TC12  F E=1:1:81 D C2 S r=R,c=C,b=B  D C1 DO
+        .I r'=R B
+        .I c'=C B
+        .I b'=B B
+        W:$X ! W "Test C1 & C2 completed.",!
+        Q
+;*  Quads: R-C-B-E ?4 -5n   - TC12 is better Delete TC1,TT,   T1 ---
+TC1   S TL="1111,1212,1313,1424,1525,1626,1737,1838,1939" D TT
+      S TL="33122,34223" D TT
+      S TL="91772,92773,93774,94875,95876,96878,97979,98980,99981" D TT
+      Q
+TT    F ti=1:1:$L(TL,",") DO  ;
+        .S t4=$P(TL,",",ti),R=$E(t4),C=$E(t4,2)
+        .S b=$E(t4,3),e=$E(t4,4,5)
+        .D C1,X1
+      Q
+; Test B, E  vs b, e
+X1    I B'=b D b^dv("B err ","B,b,t4,ti,TL")
+      I E'=e D b^dv("E err ","E,e,t4,ti,TL")
+      Q
+;Test  Eyeball list
+T1    F R=1:1:9 F C=1:1:9 D C1,WV
+      Q
+T2    D IGM,G1,PRC,PRC0(GM),XLRC,XX
+      Q
+;* Test ERC, & EB
+T3    D IGM  ; Brc() 
+      F R=1:1:9 F C=1:1:9 DO  ;
+	.D C1 S e=$$ERC(R,C) I e'=E D b^dv("Err ERC ","e,E,R,C")
+      F B=1:1:9 F bk=1:1:9 S rc=Brc(B,bk) DO
+        .D Exb  ; B, bk : B, br, bc
+	.S eb=$$EB(B,br,bc) S E=eb D C2
+	.I (R_C)'=rc D b^dv("EB  error ","eb,R,C,rc,E")
+      Q
+;*
+WV    W:$X ! W R,C," ",?4,"E=",E,",  B=",B,"  "
+      Q
+;* Test Games
+G1	D IGM  ; GM
+      S GPL="117,136,164,214,242,263,289,322,375,391" D SG1
+      S GPL="412,424,488,515,558,593,621,687,694" D SG1
+      S GPL="719,735,783,823,845,867,899,943,978,996" D SG1 
+      Q
+G1x   S GPL="117" D SG1
+      Q
+;  GPL list of play triples
+SG1   S PER=$$PL3(GPL) I PER D b^dv("Error in Play SetUp","PER,GPL") Q
+      Q
+;*   $$PL3(ML)  list of triples  ERR=$$PL3  0 ok,
+PL3(ML) I $G(ML)="" D b^dv("Null triple ML","ML") Q -1
+    F mi=1:1:$L(ML,",") S RCN=$P(ML,",",mi) S Q="" DO  I ERR Q
+      .I RCN'?3N  D b^dv("Game set-up or Play triples RCN ?","RCN,mi,ML") S ERR=1 Q
+      .S R=$E(RCN),C=$E(RCN,2),N=$E(RCN,3) DO  I ERR Q
+        ..S ERR=$$PLY(R,C,N) I ERR Q
+    ; D CIX  ;Regen Index by remaining choices
+    Q ERR
+;*  GM, nMV, LR-LC-LB
+WL      W !!,nMV," Moves-",!,GM,!
+      W:$X ! W "LR " F R=1:1:9 W ?tb(R),LR(R)," "
+      W:$X ! W "LC " F C=1:1:9 W ?tb(C),LR(C)," "
+      W:$X ! W "LB " F B=1:1:9 W ?tb(B),LB(B)," "
+      Q
+;*  Write GM
+WGX(G)  W ! F R=1:1:9 W:$X ! DO
+	  .I R=4!(R=7) W:$X ! W " - - -  - - -  - - -",!
+	  .F C=1:1:3 D W1
+	  .W "| " F C=4:1:6 D W1
+	  .W "| " F C=7:1:9 D W1
+	W !,G,!
+	Q
+W1	D C1 W $E(G,E)," "
+        Q

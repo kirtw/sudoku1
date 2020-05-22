@@ -1,0 +1,30 @@
+x-sud   ; Extra code
+
+
+********
+suTES-
+;*  OBS Check code ?
+
+;LR(R) changed  - Ck all R,C in R
+CLR(R,N) F c=1:1:9 S rc=R_c I LRC(rc)[N S LRC(rc)=$P(LRC(rc),N)_$P(LRC(rc),N,2) ;D CLRC(R)
+    Q
+CLC(C,N) F r=1:1:9 S rc=r_C I LRC(rc)[N S LRC(rc)=$P(LRC(rc),N)_$P(LRC(rc),N,2) ;D CLRC(C)
+    Q
+CLB(B,N) F k=1:1:9 S rc=Brc(B,k) I LRC(rc)[N S LRC(rc)=$P(LRC(rc),N)_$P(LRC(rc),N,2) ;D CLRC(B)
+    Q
+;*
+
+
+;*****
+T0    F TL=11111,12122,14214 D T01
+      Q
+T01   S R=$E(TL),C=$E(TL,2),r=R,c=C D xRCE S e=$E(TL,5,6) I e'=E D b^dv("REC ","R,C,E,e,TL")
+      D xEBK S b=$E(TL,3),k=$E(TL,4) I b_k'=(B_K) D b^dv("EBK ","R,C,E,B,b,K,k,TL")
+      D xERC I R_C'=(r_c) D b^dv("ERC ","E,R,r,C,c,TL")
+      ; D xBKE I e'=E D b^dv("BKE ","B,K,E,e,TL")
+      Q
+TBKE  KILL EBX F E=1:1:81 D xEBK S bk=B_K DO  ;
+	.I $D(EBX(bk)) S ebk=EBX(bk) D b^dv("TBKE  ","bk,ebk,E,B,K")
+	.S EBX(bk)=E
+      Q
+;******

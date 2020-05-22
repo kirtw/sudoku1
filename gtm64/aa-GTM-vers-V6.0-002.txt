@@ -1,0 +1,9 @@
+
+$zver
+GT.M V6.0-002 Linux x86_64
+
+Link from km7r/ mHSTA/ gtm/     to /opt/lsb-gtm/
+
+64 bit on ThinkPad  TP7r  Ubuntu 
+
+3Feb16  kw

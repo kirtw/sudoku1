@@ -1,0 +1,498 @@
+
+Allocating common symbols
+Common symbol       size              file
+
+gtm_ci_fptr         0x8               /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_ref.o
+gtm_passwd_env      0x8               /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_pk_ref.o
+gtm_free_fptr       0x8               /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_ref.o
+gtm_malloc_fptr     0x8               /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_ref.o
+gtmcrypt_err_string
+                    0x800             /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_ref.o
+gtm_is_file_identical_fptr
+                    0x8               /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_ref.o
+fast_lookup_entry   0x8               /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_dbk_ref.o
+can_prompt_passwd   0x4               /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_pk_ref.o
+gtm_passwd          0x8               /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_pk_ref.o
+gtmcrypt_inited     0x4               /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_ref.o
+gcry_already_inited
+                    0x4               /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_ref.o
+gtm_filename_to_id_fptr
+                    0x8               /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_ref.o
+pk_crypt_ctx        0x8               /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_pk_ref.o
+gtm_zstatus_fptr    0x8               /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_ref.o
+tbl_head            0x8               /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_dbk_ref.o
+iv                  0x10              /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_ref.o
+num_entries         0x4               /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_dbk_ref.o
+gtm_xcfileid_free_fptr
+                    0x8               /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_ref.o
+
+Discarded input sections
+
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crti.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/crtbeginS.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_ref.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_pk_ref.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_dbk_ref.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/crtendS.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crti.o
+LOAD /usr/lib/gcc/x86_64-redhat-linux/4.4.6/crtbeginS.o
+LOAD /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_ref.o
+LOAD /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_pk_ref.o
+LOAD /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_dbk_ref.o
+LOAD /usr/lib64/libgpgme.so
+LOAD /usr/lib64/libgpg-error.so
+LOAD /usr/lib64/libgcrypt.so
+LOAD /usr/lib/gcc/x86_64-redhat-linux/4.4.6/libgcc.a
+LOAD /usr/lib/gcc/x86_64-redhat-linux/4.4.6/libgcc_s.so
+LOAD /usr/lib64/libc.so
+START GROUP
+LOAD /lib64/libc.so.6
+LOAD /usr/lib64/libc_nonshared.a
+LOAD /lib64/ld-linux-x86-64.so.2
+END GROUP
+LOAD /usr/lib/gcc/x86_64-redhat-linux/4.4.6/libgcc.a
+LOAD /usr/lib/gcc/x86_64-redhat-linux/4.4.6/libgcc_s.so
+LOAD /usr/lib/gcc/x86_64-redhat-linux/4.4.6/crtendS.o
+LOAD /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crtn.o
+                0x0000000000000190                . = (0x0 + SIZEOF_HEADERS)
+
+.note.gnu.build-id
+                0x0000000000000190       0x24
+ *(.note.gnu.build-id)
+ .note.gnu.build-id
+                0x0000000000000190       0x24 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crti.o
+
+.hash
+ *(.hash)
+
+.gnu.hash       0x00000000000001b8      0x1a8
+ *(.gnu.hash)
+ .gnu.hash      0x00000000000001b8      0x1a8 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crti.o
+
+.dynsym         0x0000000000000360      0xa50
+ *(.dynsym)
+ .dynsym        0x0000000000000360      0xa50 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crti.o
+
+.dynstr         0x0000000000000db0      0x70a
+ *(.dynstr)
+ .dynstr        0x0000000000000db0      0x70a /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crti.o
+
+.gnu.version    0x00000000000014ba       0xdc
+ *(.gnu.version)
+ .gnu.version   0x00000000000014ba       0xdc /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crti.o
+
+.gnu.version_d  0x0000000000001598        0x0 load address 0x0000000000001596
+ *(.gnu.version_d)
+ .gnu.version_d
+                0x0000000000000000        0x0 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crti.o
+
+.gnu.version_r  0x0000000000001598       0x70
+ *(.gnu.version_r)
+ .gnu.version_r
+                0x0000000000001598       0x70 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crti.o
+
+.rela.dyn       0x0000000000001608      0x2d0
+ *(.rela.init)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ .rela.text     0x0000000000000000        0x0 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crti.o
+ *(.rela.fini)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ .rela.data.rel.ro
+                0x0000000000001608       0x18 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crti.o
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rela.ctors)
+ *(.rela.dtors)
+ *(.rela.got)
+ .rela.got      0x0000000000001620      0x2b8 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crti.o
+ *(.rela.sharable_data .rela.sharable_data.* .rela.gnu.linkonce.shrd.*)
+ *(.rela.sharable_bss .rela.sharable_bss.* .rela.gnu.linkonce.shrb.*)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+ *(.rela.ldata .rela.ldata.* .rela.gnu.linkonce.l.*)
+ *(.rela.lbss .rela.lbss.* .rela.gnu.linkonce.lb.*)
+ *(.rela.lrodata .rela.lrodata.* .rela.gnu.linkonce.lr.*)
+ *(.rela.ifunc)
+ .rela.ifunc    0x0000000000000000        0x0 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crti.o
+
+.rela.plt       0x00000000000018d8      0x630
+ *(.rela.plt)
+ .rela.plt      0x00000000000018d8      0x630 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crti.o
+ *(.rela.iplt)
+
+.init           0x0000000000001f08       0x18
+ *(.init)
+ .init          0x0000000000001f08        0x9 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crti.o
+                0x0000000000001f08                _init
+ .init          0x0000000000001f11        0x5 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/crtbeginS.o
+ .init          0x0000000000001f16        0x5 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/crtendS.o
+ .init          0x0000000000001f1b        0x5 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crtn.o
+
+.plt            0x0000000000001f20      0x430
+ *(.plt)
+ .plt           0x0000000000001f20      0x430 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crti.o
+ *(.iplt)
+
+.text           0x0000000000002350     0x2b78
+ *(.text.unlikely .text.*_unlikely)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x0000000000002350       0x17 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crti.o
+ *fill*         0x0000000000002367        0x9 90909090
+ .text          0x0000000000002370       0xaa /usr/lib/gcc/x86_64-redhat-linux/4.4.6/crtbeginS.o
+ *fill*         0x000000000000241a        0x6 90909090
+ .text          0x0000000000002420      0xb8d /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_ref.o
+                0x0000000000002420                gc_init_interface
+                0x00000000000024a0                gtmcrypt_strerror
+                0x00000000000024b0                gtmcrypt_close
+                0x0000000000002520                gtmcrypt_decrypt
+                0x00000000000027c0                gtmcrypt_encrypt
+                0x0000000000002a60                gtmcrypt_hash_gen
+                0x0000000000002b20                gtmcrypt_getkey_by_hash
+                0x0000000000002d50                gtmcrypt_getkey_by_name
+                0x0000000000002ea0                gtmcrypt_init
+ *fill*         0x0000000000002fad        0x3 90909090
+ .text          0x0000000000002fb0      0xf48 /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_pk_ref.o
+                0x0000000000002fb0                gc_pk_gpghome_has_permissions
+                0x00000000000031a0                gc_pk_scrub_plaintext_keys_from_c_stack
+                0x00000000000031c0                gc_pk_crypt_retrieve_plain_text
+                0x0000000000003220                gc_pk_get_decrypted_key
+                0x0000000000003410                gc_pk_crypt_passphrase_callback
+                0x00000000000034a0                gc_pk_crypt_load_gtmci_env
+                0x0000000000003510                gc_pk_scrub_passwd
+                0x0000000000003590                gc_pk_mask_unmask_passwd
+                0x0000000000003b20                gc_pk_crypt_prompt_passwd_if_needed
+                0x0000000000003ee0                gc_pk_mask_unmask_passwd_interlude
+ *fill*         0x0000000000003ef8        0x8 90909090
+ .text          0x0000000000003f00      0xf8f /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_dbk_ref.o
+                0x0000000000003f00                gc_dbk_get_entry_by_fileid
+                0x0000000000003f50                gc_dbk_get_hash
+                0x0000000000003fb0                gc_dbk_fill_sym_key_and_hash
+                0x00000000000044e0                gc_dbk_get_entry_by_hash
+                0x0000000000004530                gc_dbk_fill_gtm_dbkeys_fname
+                0x00000000000047b0                gc_dbk_scrub_entries
+                0x00000000000048d0                gc_dbk_load_entries_from_file
+ *fill*         0x0000000000004e8f        0x1 90909090
+ .text          0x0000000000004e90       0x36 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/crtendS.o
+ *fill*         0x0000000000004ec6        0x2 90909090
+ .text          0x0000000000004ec8        0x0 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crtn.o
+ *(.gnu.warning)
+
+.fini           0x0000000000004ec8        0xe
+ *(.fini)
+ .fini          0x0000000000004ec8        0x4 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crti.o
+                0x0000000000004ec8                _fini
+ .fini          0x0000000000004ecc        0x5 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/crtbeginS.o
+ .fini          0x0000000000004ed1        0x5 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crtn.o
+                0x0000000000004ed6                PROVIDE (__etext, .)
+                0x0000000000004ed6                PROVIDE (_etext, .)
+                0x0000000000004ed6                PROVIDE (etext, .)
+
+.rodata         0x0000000000004ed8      0x646
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.str1.8
+                0x0000000000004ed8      0x128 /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_ref.o
+ .rodata.str1.1
+                0x0000000000005000       0x76 /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_ref.o
+                                         0x79 (size before relaxing)
+ .rodata.str1.1
+                0x0000000000005076       0xce /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_pk_ref.o
+                                         0xe7 (size before relaxing)
+ *fill*         0x0000000000005144        0x4 00
+ .rodata.str1.8
+                0x0000000000005148      0x105 /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_pk_ref.o
+                                        0x13d (size before relaxing)
+ *fill*         0x000000000000524d        0x3 00
+ .rodata.str1.8
+                0x0000000000005250      0x298 /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_dbk_ref.o
+                                        0x2ca (size before relaxing)
+ .rodata.str1.1
+                0x00000000000054e8       0x36 /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_dbk_ref.o
+                                         0x55 (size before relaxing)
+
+.rodata1
+ *(.rodata1)
+
+.eh_frame_hdr   0x0000000000005520       0xdc
+ *(.eh_frame_hdr)
+ .eh_frame_hdr  0x0000000000005520       0xdc /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_ref.o
+
+.eh_frame       0x0000000000005600      0x4f4
+ *(.eh_frame)
+ .eh_frame      0x0000000000005600      0x170 /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_ref.o
+                                        0x158 (size before relaxing)
+ .eh_frame      0x0000000000005770      0x1f8 /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_pk_ref.o
+ .eh_frame      0x0000000000005968      0x188 /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_dbk_ref.o
+                                        0x198 (size before relaxing)
+ .eh_frame      0x0000000000005af0        0x4 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/crtendS.o
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+                0x0000000000005af4                . = (ALIGN (0x200000) - ((0x200000 - .) & 0x1fffff))
+                0x0000000000206000                . = (0x200000 DATA_SEGMENT_ALIGN 0x1000)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array
+ *(.preinit_array)
+
+.init_array
+ *(SORT(.init_array.*))
+ *(.init_array)
+
+.fini_array
+ *(.fini_array)
+ *(SORT(.fini_array.*))
+
+.ctors          0x0000000000206000       0x10
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ .ctors         0x0000000000206000        0x8 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/crtbeginS.o
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+ .ctors         0x0000000000206008        0x8 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/crtendS.o
+
+.dtors          0x0000000000206010       0x10
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ .dtors         0x0000000000206010        0x8 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/crtbeginS.o
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+ .dtors         0x0000000000206018        0x8 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/crtendS.o
+                0x0000000000206018                __DTOR_END__
+
+.jcr            0x0000000000206020        0x8
+ *(.jcr)
+ .jcr           0x0000000000206020        0x0 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/crtbeginS.o
+ .jcr           0x0000000000206020        0x8 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/crtendS.o
+
+.data.rel.ro    0x0000000000206028        0x8
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ *(.data.rel.ro* .gnu.linkonce.d.rel.ro.*)
+ .data.rel.ro   0x0000000000206028        0x8 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/crtbeginS.o
+                0x0000000000206028                __dso_handle
+
+.dynamic        0x0000000000206030      0x1b0
+ *(.dynamic)
+ .dynamic       0x0000000000206030      0x1b0 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crti.o
+                0x0000000000206030                _DYNAMIC
+
+.got            0x00000000002061e0       0xe8
+ *(.got)
+ .got           0x00000000002061e0       0xe8 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crti.o
+ *(.igot)
+                0x00000000002062c8                . = (. DATA_SEGMENT_RELRO_END 0x18)
+
+.got.plt        0x00000000002062c8      0x228
+ *(.got.plt)
+ .got.plt       0x00000000002062c8      0x228 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crti.o
+                0x00000000002062c8                _GLOBAL_OFFSET_TABLE_
+ *(.igot.plt)
+
+.data           0x00000000002064f0        0x0
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x00000000002064f0        0x0 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crti.o
+ .data          0x00000000002064f0        0x0 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/crtbeginS.o
+ .data          0x00000000002064f0        0x0 /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_ref.o
+ .data          0x00000000002064f0        0x0 /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_pk_ref.o
+ .data          0x00000000002064f0        0x0 /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_dbk_ref.o
+ .data          0x00000000002064f0        0x0 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/crtendS.o
+ .data          0x00000000002064f0        0x0 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crtn.o
+
+.data1
+ *(.data1)
+
+.sharable_data  0x0000000000400000        0x0
+                0x0000000000400000                PROVIDE (__sharable_data_start, .)
+ *(.sharable_data .sharable_data.* .gnu.linkonce.shrd.*)
+                0x0000000000400000                . = ALIGN ((. != 0x0)?0x200000:0x1)
+                0x0000000000400000                PROVIDE (__sharable_data_end, .)
+                0x0000000000400000                _edata = .
+                0x0000000000400000                PROVIDE (edata, .)
+                0x0000000000400000                __bss_start = .
+
+.bss            0x0000000000206500      0xad0
+ *(.dynbss)
+ .dynbss        0x0000000000000000        0x0 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crti.o
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x0000000000206500        0x0 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crti.o
+ .bss           0x0000000000206500       0x10 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/crtbeginS.o
+ .bss           0x0000000000206510        0x0 /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_ref.o
+ *fill*         0x0000000000206510       0x10 00
+ .bss           0x0000000000206520      0x200 /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_pk_ref.o
+ .bss           0x0000000000206720        0x8 /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_dbk_ref.o
+ .bss           0x0000000000206728        0x0 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/crtendS.o
+ .bss           0x0000000000206728        0x0 /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crtn.o
+ *(COMMON)
+ *fill*         0x0000000000206728       0x18 00
+ COMMON         0x0000000000206740      0x858 /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_ref.o
+                0x0000000000206740                gtm_ci_fptr
+                0x0000000000206748                gtm_free_fptr
+                0x0000000000206750                gtm_malloc_fptr
+                0x0000000000206760                gtmcrypt_err_string
+                0x0000000000206f60                gtm_is_file_identical_fptr
+                0x0000000000206f68                gtmcrypt_inited
+                0x0000000000206f6c                gcry_already_inited
+                0x0000000000206f70                gtm_filename_to_id_fptr
+                0x0000000000206f78                gtm_zstatus_fptr
+                0x0000000000206f80                iv
+                0x0000000000206f90                gtm_xcfileid_free_fptr
+ COMMON         0x0000000000206f98       0x20 /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_pk_ref.o
+                0x0000000000206f98                gtm_passwd_env
+                0x0000000000206fa0                can_prompt_passwd
+                0x0000000000206fa8                gtm_passwd
+                0x0000000000206fb0                pk_crypt_ctx
+ COMMON         0x0000000000206fb8       0x14 /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_dbk_ref.o
+                0x0000000000206fb8                fast_lookup_entry
+                0x0000000000206fc0                tbl_head
+                0x0000000000206fc8                num_entries
+                0x0000000000206fd0                . = ALIGN ((. != 0x0)?0x8:0x1)
+ *fill*         0x0000000000206fcc        0x4 00
+
+.lbss
+ *(.dynlbss)
+ *(.lbss .lbss.* .gnu.linkonce.lb.*)
+ *(LARGE_COMMON)
+
+.sharable_bss   0x0000000000400000        0x0
+                0x0000000000400000                PROVIDE (__sharable_bss_start, .)
+ *(.dynsharablebss)
+ *(.sharable_bss .sharable_bss.* .gnu.linkonce.shrb.*)
+ *(SHARABLE_COMMON)
+                0x0000000000400000                . = ALIGN ((. != 0x0)?0x200000:0x1)
+                0x0000000000400000                PROVIDE (__sharable_bss_end, .)
+                0x0000000000400000                . = ALIGN (0x8)
+
+.lrodata
+ *(.lrodata .lrodata.* .gnu.linkonce.lr.*)
+
+.ldata          0x0000000000606fd0        0x0
+ *(.ldata .ldata.* .gnu.linkonce.l.*)
+                0x0000000000606fd0                . = ALIGN ((. != 0x0)?0x8:0x1)
+                0x0000000000606fd0                . = ALIGN (0x8)
+                0x0000000000606fd0                _end = .
+                0x0000000000606fd0                PROVIDE (end, .)
+                0x0000000000606fd0                . = DATA_SEGMENT_END (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x2c
+ *(.comment)
+ .comment       0x0000000000000000       0x2c /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crti.o
+                                         0x2d (size before relaxing)
+ .comment       0x0000000000000000       0x2d /usr/lib/gcc/x86_64-redhat-linux/4.4.6/crtbeginS.o
+ .comment       0x0000000000000000       0x2d /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_ref.o
+ .comment       0x0000000000000000       0x2d /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_pk_ref.o
+ .comment       0x0000000000000000       0x2d /usr/library/V60002/pro/plugin/gtmcrypt/gtmcrypt_dbk_ref.o
+ .comment       0x0000000000000000       0x2d /usr/lib/gcc/x86_64-redhat-linux/4.4.6/crtendS.o
+ .comment       0x0000000000000000       0x2d /usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64/crtn.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+ *(.gnu.lto_*)
+OUTPUT(/usr/library/V60002/pro/plugin/gtmcrypt/libgtmcrypt_gcrypt_AES256CFB.so elf64-x86-64)

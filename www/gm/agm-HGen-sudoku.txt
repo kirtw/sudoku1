@@ -1,0 +1,12 @@
+#!
+
+#   Dir Descr   file:///home/kw/kj7r/sudoku/www/gm/agm-HGen-sudoku.txt
+
+#   FileNames
+      Game-id	{G2, G1, pvIII    See ^suIGM  and ^sugm
+      nMV - Move #
+      File Type {Showing NRM, Showing internal
+	vs Mode
+      
+      Have extension  "*.gm2.html"  so can delete in masse del "*2.html"
+      
